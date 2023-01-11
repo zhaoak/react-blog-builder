@@ -14,5 +14,11 @@ export default function Preview() {
   //   <p>This is some blog text. </p>
   // </div>
 
-  return <></>;
+  return (
+    <div className="preview architect" style={{ textAlign: 'center' }}>
+      <h1>Title</h1>
+      <h3>Subtitle</h3>
+      <p>Post Text</p>
+    </div>
+  );
 }
