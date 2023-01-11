@@ -1,0 +1,59 @@
+.editor {
+  grid-area: editor;
+}
+
+.form-control {
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+}
+
+input[type='text'],
+select,
+textarea {
+  background-color: var(--color1);
+  border: none;
+  border-radius: 2px;
+  height: 2rem;
+  width: 80%;
+  margin-top: 20px;
+}
+
+input[type='text']:focus,
+select:focus,
+textarea:focus {
+  border: none;
+  box-shadow: 0 0 3px 2px var(--color5);
+  outline: none;
+}
+
+input[type='text'] + label,
+select + label,
+textarea + label,
+.form-control > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+}
+
+.radio-group {
+  text-align: center;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+input[type='radio'] + i {
+  cursor: pointer;
+  font-size: 2rem;
+}
+input[type='radio'] + i:hover {
+  cursor: pointer;
+  color: var(--color5);
+}
+
+input[type='radio']:checked + i {
+  color: var(--color5);
+}

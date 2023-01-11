@@ -1,0 +1,8 @@
+.preview {
+  grid-area: preview;
+  height: 80%;
+  width: 100%;
+  background-color: var(--color1);
+  margin: 20px;
+  color: var(--color5);
+}
