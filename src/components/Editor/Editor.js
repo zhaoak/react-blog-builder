@@ -2,15 +2,21 @@ import React from 'react';
 
 import './Editor.css';
 
-export default function Editor({ setTitle, setSubtitle, setFont }) {
-  const handleChange = (event) => {
-    console.log('title change:', event.target.value);
+export default function Editor({ setTitle, setSubtitle, setFont, setAlignment }) {
+  const handleChangeTitle = (event) => {
     setTitle(event.target.value);
   };
+
+  // setSubtitle is called inline in the subtitle input box
+
+  const handleChangeAlignment = (event) => {
+    setAlignment(event.target.value);
+  };
+
   return (
     <div className="editor">
       <div className="form-control">
-        <input name="title" type="text" onChange={handleChange} />
+        <input name="title" type="text" onChange={handleChangeTitle} />
         <label htmlFor="title">Title</label>
       </div>
       <div className="form-control">
@@ -41,7 +47,7 @@ export default function Editor({ setTitle, setSubtitle, setFont }) {
       </div>
       <div className="form-control">
         <label>Alignment</label>
-        <div className="radio-group">
+        <div className="radio-group" onChange={handleChangeAlignment}>
           <label>
             <input name="align" type="radio" value="left" />
             <i className="ri-align-left"></i>
